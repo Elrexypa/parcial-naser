@@ -8,10 +8,10 @@ function App() {
   const [comprar, setComprar] = useState(false); 
 
   let extintores = [ 
-    {id: 1, clase: 'ABC', agente: 'Hallon'},
-    {id: 2, clase: 'ABC', agente: 'Polvo'},
-    {id: 3, clase: 'BC', agente: 'Co2'},
-    {id: 4, clase: 'A', agente: 'Agua'},
+    {id: 1,  agente: 'Hallon', clase: 'ABC'},
+    {id: 2,  agente: 'Polvo', clase: 'ABC'},
+    {id: 3,  agente: 'Co2', clase: 'BC'},
+    {id: 4,  agente: 'Agua', clase: 'A'},
   ]
 
   return (
