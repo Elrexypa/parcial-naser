@@ -39,7 +39,7 @@ const Form = ({ onFormSubmit }) => {
           required
         /><br /><br />
 
-        <button type="submit">Enviar</button>
+        <button id='boton' type="submit">Enviar</button>
       </form>
       
       {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}

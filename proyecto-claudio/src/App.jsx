@@ -12,10 +12,16 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Te queremos conocer</h1>
-      <Form onFormSubmit={handleFormSubmit} />
 
-      {cardData && <Card nombre={cardData.nombre} artista={cardData.artista} />}
+      <div id='superior'>
+        <h1>Te queremos conocer</h1>
+        <Form onFormSubmit={handleFormSubmit} />
+      </div>
+
+      <div>
+        {cardData && <Card nombre={cardData.nombre} artista={cardData.artista} />}
+      </div>
+     
     </div>
   );
 }
