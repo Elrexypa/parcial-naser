@@ -1,13 +1,13 @@
-import React from 'react'
+import React from 'react';
 
-const Card = ({matafuego, setComprar}) =>{
-    return(
-        <div >
-            <h3>{matafuego.agente}</h3>
-            <h4>{matafuego.clase}</h4>
-            <button onClick={ () => setComprar(true)}>Seleccionar extintor</button>
-        </div>
-    )
-}
+const Card = ({ nombre, artista }) => {
+  return (
+    <div className="Card">
+      <h1>Hola {nombre}</h1> 
+      <h2><strong>Nos agrada saber que tu Banda o Artista favorito es:</strong> {artista}</h2>
+    </div>
+  );
+};
 
-export default Card
+export default Card;
+

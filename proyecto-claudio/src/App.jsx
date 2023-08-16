@@ -1,25 +1,23 @@
-import {useState} from 'react'
-import './App.css'
-import Card from './components/Card'
-import Form from './components/Form'
+import React, { useState } from 'react';
+import './App.css';
+import Form from './components/Form';
+import Card from './components/Card';
 
 function App() {
+  const [cardData, setCardData] = useState(null);
 
-  const [comprar, setComprar] = useState(false); 
-
-  let extintores = [ 
-    {id: 1,  agente: 'Hallon', clase: 'ABC'},
-    {id: 2,  agente: 'Polvo', clase: 'ABC'},
-    {id: 3,  agente: 'Co2', clase: 'BC'},
-    {id: 4,  agente: 'Agua', clase: 'A'},
-  ]
+  const handleFormSubmit = (nombre, artista) => {
+    setCardData({ nombre, artista });
+  };
 
   return (
-    <>
-      {extintores.map((matafuego) => <Card matafuego={matafuego} key={matafuego.id} setComprar={setComprar} />)}
-      {comprar && <Form/>}
-    </>
-  )
+    <div className="App">
+      <h1>Te queremos conocer</h1>
+      <Form onFormSubmit={handleFormSubmit} />
+
+      {cardData && <Card nombre={cardData.nombre} artista={cardData.artista} />}
+    </div>
+  );
 }
 
-export default App
+export default App;
